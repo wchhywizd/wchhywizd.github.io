@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>舒华体育入局24小时健身赛道</title>
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        secondary: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#4c1d95',
+                        },
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        
+        .highlight {
+            @apply text-primary-600 dark:text-primary-400 font-medium;
+        }
+        
+        .trend-card, .pain-point, .principle-analysis {
+            @apply bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 mb-6 transition-all duration-300 hover:shadow-lg border border-gray-100 dark:border-gray-700;
+        }
+        
+        .trend-card:hover, .pain-point:hover, .principle-analysis:hover {
+            @apply transform hover:scale-[1.02] border-primary-200 dark:border-primary-700;
+        }
+        
+        .trend-icon, .pain-point-header i, .principle-icon {
+            @apply text-2xl text-primary-500 dark:text-primary-400 mb-3;
+        }
+        
+        .solution-box {
+            @apply mt-4 p-4 bg-primary-50 dark:bg-gray-700 rounded-lg border-l-4 border-primary-500;
+        }
+        
+        .solution-box h4 {
+            @apply text-lg font-medium text-gray-800 dark:text-white mb-2 flex items-center;
+        }
+        
+        .solution-box h4 i {
+            @apply mr-2 text-primary-500 dark:text-primary-400;
+        }
+        
+        .author-section {
+            @apply mt-16 pt-8 border-t border-gray-200 dark:border-gray-700;
+        }
+        
+        .social-links a {
+            @apply inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 mr-4 transition-colors;
+        }
+        
+        .social-links a i {
+            @apply mr-1;
+        }
+        
+        .copyright {
+            @apply text-sm text-gray-500 dark:text-gray-400 mt-2;
+        }
+        
+        /* 动画效果 */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
+    <!-- 主题切换按钮 -->
+    <div class="fixed top-4 right-4 z-50">
+        <button id="theme-toggle" class="p-2 rounded-full bg-white dark:bg-gray-800 shadow-md hover:shadow-lg transition-all">
+            <i class="fas fa-sun text-yellow-500 dark:hidden"></i>
+            <i class="fas fa-moon text-blue-300 hidden dark:block"></i>
+        </button>
+    </div>
+
+    <div class="container max-w-4xl mx-auto px-4 py-12">
+        <header class="mb-16 text-center animate-on-scroll">
+            <h1 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">舒华体育入局24小时健身赛道</h1>
+            <p class="text-xl text-gray-600 dark:text-gray-300">破解行业困局的新机遇</p>
+        </header>
+
+        <section class="mb-16 animate-on-scroll">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8 text-gray-800 dark:text-white">消费降级浪潮下，24小时健身成唯一"逆势增长"赛道</h2>
+            
+            <div class="principle-analysis">
+                <p class="mb-4">2024年，中国健身行业经历结构性洗牌：传统商业健身房闭店潮持续，以超级猩猩为代表的团课品牌门店骤降<span class="highlight">41.3%</span>至131家，而24小时自助健身房却逆势扩张。乐刻运动以<span class="highlight">1524家</span>门店稳居榜首，新品牌如金力豪、熊猫健身等加速下沉二三线城市。</p>
+                
+                <div class="bg-primary-50 dark:bg-gray-800 p-5 rounded-lg my-6">
+                    <h3 class="text-lg font-medium mb-3 text-gray-800 dark:text-white">消费逻辑转变</h3>
+                    <div class="grid grid-cols-3 gap-4 text-center">
+                        <div class="bg-white dark:bg-gray-700 p-3 rounded-lg shadow-sm">
+                            <i class="fas fa-feather-alt text-primary-500 text-xl mb-2"></i>
+                            <p class="font-medium">轻量化</p>
+                        </div>
+                        <div class="bg-white dark:bg-gray-700 p-3 rounded-lg shadow-sm">
+                            <i class="fas fa-tags text-primary-500 text-xl mb-2"></i>
+                            <p class="font-medium">低价化</p>
+                        </div>
+                        <div class="bg-white dark:bg-gray-700 p-3 rounded-lg shadow-sm">
+                            <i class="fas fa-clock text-primary-500 text-xl mb-2"></i>
+                            <p class="font-medium">灵活化</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="mb-4">数据显示，2024年健身周卡、月卡消费增长超<span class="highlight">60%</span>，消费者对"年卡绑定"的抵触情绪显著。</p>
+                
+                <div class="solution-box">
+                    <h4><i class="fas fa-lightbulb"></i> 市场机遇</h4>
+                    <p>舒华体育若以<span class="highlight">"24小时+低价月付"</span>模式切入，不仅能承接消费降级红利，更能通过器械成本优势（占传统健身房投入<span class="highlight">75%</span>）构建竞争壁垒，将运营利润空间提升至行业前列。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16 animate-on-scroll">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8 text-gray-800 dark:text-white">教练困局：行业信任危机与AI的破局点</h2>
+            
+            <p class="mb-6">当前健身行业面临着整个行业的信任危机。</p>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="pain-point">
+                    <div class="pain-point-header flex items-center mb-3">
+                        <i class="fas fa-balance-scale mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">技能与口碑失衡</h3>
+                    </div>
+                    <p class="mb-4">传统健身房依赖教练销售，但用户对"推销式服务"抵触加剧，同时服务质量和价格不匹配，转而投向无推销的24小时铁馆。</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">优质教练凭借个人IP带走客户的现象普遍，品牌难以掌控核心资源。</p>
+                </div>
+                
+                <div class="pain-point">
+                    <div class="pain-point-header flex items-center mb-3">
+                        <i class="fas fa-chart-line mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">规模化陷阱</h3>
+                    </div>
+                    <p class="mb-4">行业缺乏标准化教练供给，规模扩张反而导致服务质量波动和管理成本攀升。</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">一旦市场回暖，教练流失风险将威胁品牌存续。</p>
+                </div>
+                
+                <div class="pain-point">
+                    <div class="pain-point-header flex items-center mb-3">
+                        <i class="fas fa-robot mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white">AI革命</h3>
+                    </div>
+                    <p>AI技术的快速发展，将取代普通教练为更广泛的用户提供基础的健身服务。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16 animate-on-scroll">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8 text-gray-800 dark:text-white">舒华的核心优势：从"硬件巨头"到"场景服务商"</h2>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="trend-card">
+                    <div class="trend-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="trend-content">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800 dark:text-white">成本控制能力</h3>
+                        <p>作为健身器材龙头，舒华自有供应链可大幅降低器械采购与维护成本。对比乐刻加盟模式，舒华在场地装修、器械投入上具备<span class="highlight">10%+</span>以上的成本优势，直接转化为利润空间。</p>
+                    </div>
+                </div>
+
+                <div class="trend-card">
+                    <div class="trend-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <div class="trend-content">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800 dark:text-white">全场景服务经验</h3>
+                        <p>从全民健身工程到智慧体育公园，舒华已积累超<span class="highlight">3300个</span>场景落地经验。24小时健身房可复用其"硬件+软件+课程"的生态体系，快速复制标准化门店。</p>
+                    </div>
+                </div>
+
+                <div class="trend-card">
+                    <div class="trend-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="trend-content">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800 dark:text-white">政策与品牌势能</h3>
+                        <p>国家"体重管理年"行动推动健身刚需化，舒华作为中国奥委会官方合作伙伴，品牌公信力可快速打开市场。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16 animate-on-scroll">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8 text-gray-800 dark:text-white">健萌生态赋能：健康消费闭环的想象空间</h2>
+            
+            <div class="principle-analysis">
+                <p class="mb-6">24小时健身房的终极价值在于构建"运动-饮食-健康"闭环，"饱饱博士"作为健康餐的新兴品牌，以美味、超值、健康为核心价值，致力于为消费者提供好吃的身材管理餐。可以很好的和舒华模式有机结合，提供"训练+营养"一体化服务中的营养支持。</p>
+                
+                <p class="mb-4">同时为了保障业务能够快速铺开，健萌还可以提供如下支持：</p>
+            </div>
+            
+            <!-- AI数字化运营管理系统 -->
+            <div class="mt-8 bg-gradient-to-r from-white to-secondary-50 dark:from-gray-800 dark:to-gray-700 p-6 rounded-xl border border-secondary-100 dark:border-gray-700 shadow-md animate-on-scroll">
+                <h3 class="text-xl font-semibold mb-4 text-gray-800 dark:text-white flex items-center">
+                    <i class="fas fa-brain text-secondary-500 mr-3"></i>
+                    AI数字化运营管理系统--保障运营效率
+                </h3>
+                
+                <p class="mb-4">健萌自研运营系统已有<span class="highlight">9年</span>的业务沉淀，已在3月全面接入deepseek，保障远高于行业平均水平的运行效率。</p>
+                
+                <!-- 生命周期阶段划分与核心策略 -->
+                <div class="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-sm mb-6">
+                    <h4 class="font-medium mb-4 text-gray-800 dark:text-white flex items-center border-b border-gray-200 dark:border-gray-700 pb-2">
+                        <i class="fas fa-life-ring text-secondary-500 mr-2"></i>
+                        会员生命周期阶段划分与核心策略
+                    </h4>
+                    
+                    <div class="relative">
+                        <!-- 垂直连接线 -->
+                        <div class="absolute left-5 top-6 bottom-6 w-0.5 bg-secondary-200 dark:bg-secondary-800 z-0"></div>
+                        
+                        <!-- 导入期 -->
+                        <div class="relative z-10 mb-6 flex">
+                            <div class="w-10 h-10 rounded-full bg-secondary-100 dark:bg-secondary-900 flex items-center justify-center mr-4 flex-shrink-0 border-2 border-white dark:border-gray-800 shadow-sm">
+                                <i class="fas fa-user-plus text-secondary-600 dark:text-secondary-300"></i>
+                            </div>
+                            <div class="bg-secondary-50 dark:bg-gray-700 p-4 rounded-lg flex-1 shadow-sm border-l-4 border-secondary-300 dark:border-secondary-600">
+                                <div class="flex items-center mb-3">
+                                    <h5 class="font-medium text-lg">导入期（会员获取）</h5>
+                                    <span class="ml-auto px-2 py-1 bg-secondary-100 dark:bg-secondary-800 text-secondary-600 dark:text-secondary-300 text-xs rounded-full">阶段 1</span>
+                                </div>
+                                
+                                <p class="text-sm mb-3"><strong>目标：</strong>吸引潜在用户转化为会员，建立初步连接。</p>
+                                
+                                <div class="space-y-3">
+                                    <div class="bg-white dark:bg-gray-800 p-3 rounded shadow-sm">
+                                        <div class="flex items-center mb-1">
+                                            <i class="fas fa-bullhorn text-secondary-500 mr-2"></i>
+                                            <span class="text-sm font-medium">多渠道引流</span>
+                                        </div>
+                                        <p class="text-xs text-gray-600 dark:text-gray-400">线上（公众号、短视频平台）与线下（门店体验、活动）结合，通过新会员专享福利（如低价体验课包）降低入会门槛。</p>
+                                    </div>
+                                    <div class="bg-white dark:bg-gray-800 p-3 rounded shadow-sm">
+                                        <div class="flex items-center mb-1">
+                                            <i class="fas fa-share-alt text-secondary-500 mr-2"></i>
+                                            <span class="text-sm font-medium">裂变机制</span>
+                                        </div>
+                                        <p class="text-xs text-gray-600 dark:text-gray-400">老会员邀请奖励、分享有礼活动，利用社交传播扩大覆盖。</p>
+                                    </div>
+                                    <div class="bg-white dark:bg-gray-800 p-3 rounded shadow-sm">
+                                        <div class="flex items-center mb-1">
+                                            <i class="fas fa-database text-secondary-500 mr-2"></i>
+                                            <span class="text-sm font-medium">数据化触达</span>
+                                        </div>
+                                        <p class="text-xs text-gray-600 dark:text-gray-400">通过健康评估问卷、智能设备体验等收集用户需求，推送个性化入会权益。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 成长期 -->
+                        <div class="relative z-10 mb-6 flex">
+                            <div class="w-10 h-10 rounded-full bg-secondary-100 dark:bg-secondary-900 flex items-center justify-center mr-4 flex-shrink-0 border-2 border-white dark:border-gray-800 shadow-sm">
+                                <i class="fas fa-chart-line text-secondary-600 dark:text-secondary-300"></i>
+                            </div>
+                            <div class="bg-secondary-50 dark:bg-gray-700 p-4 rounded-lg flex-1 shadow-sm border-l-4 border-secondary-300 dark:border-secondary-600">
+                                <div class="flex items-center mb-3">
+                                    <h5 class="font-medium text-lg">成长期（会员活跃与留存）</h5>
+                                    <span class="ml-auto px-2 py-1 bg-secondary-100 dark:bg-secondary-800 text-secondary-600 dark:text-secondary-300 text-xs rounded-full">阶段 2</span>
+                                </div>
+                                
+                                <p class="text-sm mb-3"><strong>目标：</strong>提升会员粘性，培养长期健身习惯。</p>
+                                
+                                <div class="space-y-3">
+                                    <div class="bg-white dark:bg-gray-800 p-3 rounded shadow-sm">
+                                        <div class="flex items-center mb-1">
+                                            <i class="fas fa-layer-group text-secondary-500 mr-2"></i>
+                                            <span class="text-sm font-medium">分级服务体系</span>
+                                        </div>
+                                        <p class="text-xs text-gray-600 dark:text-gray-400">根据消费金额、活跃度划分等级（V1-V6），差异化权益包括优先预约、专属教练指导、定制训练计划等。</p>
+                                    </div>
+                                    <div class="bg-white dark:bg-gray-800 p-3 rounded shadow-sm">
+                                        <div class="flex items-center mb-1">
+                                            <i class="fas fa-users text-secondary-500 mr-2"></i>
+                                            <span class="text-sm font-medium">社区化运营</span>
+                                        </div>
+                                        <p class="text-xs text-gray-600 dark:text-gray-400">组织健身挑战赛、健康讲座、户外拓展等活动，增强会员互动与归属感。</p>
+                                    </div>
+                                    <div class="bg-white dark:bg-gray-800 p-3 rounded shadow-sm">
+                                        <div class="flex items-center mb-1">
+                                            <i class="fas fa-calendar-check text-secondary-500 mr-2"></i>
+                                            <span class="text-sm font-medium">打卡激励机制</span>
+                                        </div>
+                                        <p class="text-xs text-gray-600 dark:text-gray-400">通过经验值奖励、打卡优惠等，强化用户付出行为，延长生命周期。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 成熟期 -->
+                        <div class="relative z-10 mb-6 flex">
+                            <div class="w-10 h-10 rounded-full bg-secondary-100 dark:bg-secondary-900 flex items-center justify-center mr-4 flex-shrink-0 border-2 border-white dark:border-gray-800 shadow-sm">
+                                <i class="fas fa-crown text-secondary-600 dark:text-secondary-300"></i>
+                            </div>
+                            <div class="bg-secondary-50 dark:bg-gray-700 p-4 rounded-lg flex-1 shadow-sm border-l-4 border-secondary-300 dark:border-secondary-600">
+                                <div class="flex items-center mb-3">
+                                    <h5 class="font-medium text-lg">成熟期（高价值用户运营）</h5>
+                                    <span class="ml-auto px-2 py-1 bg-secondary-100 dark:bg-secondary-800 text-secondary-600 dark:text-secondary-300 text-xs rounded-full">阶段 3</span>
+                                </div>
+                                
+                                <p class="text-sm mb-3"><strong>目标：</strong>挖掘核心用户价值，提升复购与口碑传播。</p>
+                                
+                                <div class="space-y-3">
+                                    <div class="bg-white dark:bg-gray-800 p-3 rounded shadow-sm">
+                                        <div class="flex items-center mb-1">
+                                            <i class="fas fa-clipboard-list text-secondary-500 mr-2"></i>
+                                            <span class="text-sm font-medium">名单制管理</span>
+                                        </div>
+                                        <p class="text-xs text-gray-600 dark:text-gray-400">筛选高价值用户，提供定制化服务（如节日关怀、周边赠送）。</p>
+                                    </div>
+                                    <div class="bg-white dark:bg-gray-800 p-3 rounded shadow-sm">
+                                        <div class="flex items-center mb-1">
+                                            <i class="fas fa-medal text-secondary-500 mr-2"></i>
+                                            <span class="text-sm font-medium">社交货币设计</span>
+                                        </div>
+                                        <p class="text-xs text-gray-600 dark:text-gray-400">通过会员专属标识、里程碑（如100次打卡徽章）增强荣誉感。</p>
+                                    </div>
+                                    <div class="bg-white dark:bg-gray-800 p-3 rounded shadow-sm">
+                                        <div class="flex items-center mb-1">
+                                            <i class="fas fa-shopping-cart text-secondary-500 mr-2"></i>
+                                            <span class="text-sm font-medium">交叉销售</span>
+                                        </div>
+                                        <p class="text-xs text-gray-600 dark:text-gray-400">引入健康餐饮、联合品牌权益，拓展消费场景。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 流失期 -->
+                        <div class="relative z-10 flex">
+                            <div class="w-10 h-10 rounded-full bg-secondary-100 dark:bg-secondary-900 flex items-center justify-center mr-4 flex-shrink-0 border-2 border-white dark:border-gray-800 shadow-sm">
+                                <i class="fas fa-undo-alt text-secondary-600 dark:text-secondary-300"></i>
+                            </div>
+                            <div class="bg-secondary-50 dark:bg-gray-700 p-4 rounded-lg flex-1 shadow-sm border-l-4 border-secondary-300 dark:border-secondary-600">
+                                <div class="flex items-center mb-3">
+                                    <h5 class="font-medium text-lg">流失期（召回与唤醒）</h5>
+                                    <span class="ml-auto px-2 py-1 bg-secondary-100 dark:bg-secondary-800 text-secondary-600 dark:text-secondary-300 text-xs rounded-full">阶段 4</span>
+                                </div>
+                                
+                                <p class="text-sm mb-3"><strong>目标：</strong>识别流失风险，激活沉睡会员。</p>
+                                
+                                <div class="space-y-3">
+                                    <div class="bg-white dark:bg-gray-800 p-3 rounded shadow-sm">
+                                        <div class="flex items-center mb-1">
+                                            <i class="fas fa-exclamation-triangle text-secondary-500 mr-2"></i>
+                                            <span class="text-sm font-medium">流失预警</span>
+                                        </div>
+                                        <p class="text-xs text-gray-600 dark:text-gray-400">分析活跃频次下降、权益未使用等数据，触发预警机制。</p>
+                                    </div>
+                                    <div class="bg-white dark:bg-gray-800 p-3 rounded shadow-sm">
+                                        <div class="flex items-center mb-1">
+                                            <i class="fas fa-bullseye text-secondary-500 mr-2"></i>
+                                            <span class="text-sm font-medium">精准触达</span>
+                                        </div>
+                                        <p class="text-xs text-gray-600 dark:text-gray-400">通过短信、APP推送、代金券定向发放（如生日福利）唤醒用户。</p>
+                                    </div>
+                                    <div class="bg-white dark:bg-gray-800 p-3 rounded shadow-sm">
+                                        <div class="flex items-center mb-1">
+                                            <i class="fas fa-comment-dots text-secondary-500 mr-2"></i>
+                                            <span class="text-sm font-medium">反馈优化</span>
+                                        </div>
+                                        <p class="text-xs text-gray-600 dark:text-gray-400">开展流失会员调研，针对性改进服务（如课程调整、价格优化）。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-6 my-6">
+                    <div class="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-sm">
+                        <div class="w-12 h-12 flex items-center justify-center bg-secondary-100 dark:bg-secondary-900 rounded-full mb-4">
+                            <i class="fas fa-user-clock text-xl text-secondary-600 dark:text-secondary-300"></i>
+                        </div>
+                        <h4 class="font-medium mb-3 text-gray-800 dark:text-white">会员全生命周期运营体系</h4>
+                        <p class="text-sm">构建了完整的会员全生命周期运营体系，为用户提供运动+营养+兴趣挑战社群的一站式服务。</p>
+                        
+                        <!-- 会员全生命周期图片 - 修改为单行显示 -->
+                        <div class="my-4">
+                            <div class="relative rounded-lg overflow-hidden mb-3" style="height: 240px;">
+                                <img src="./images/app首页.jpg" alt="APP首页" class="absolute inset-0 w-full h-full object-contain bg-gray-100 dark:bg-gray-900">
+                                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2">
+                                    <p class="text-xs text-white">APP首页界面</p>
+                                </div>
+                            </div>
+                            <div class="relative rounded-lg overflow-hidden" style="height: 160px;">
+                                <img src="./images/刷脸示意图.jpg" alt="刷脸示意图" class="absolute inset-0 w-full h-full object-cover">
+                                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2">
+                                    <p class="text-xs text-white">刷脸入场系统</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700">
+                            <p class="text-sm text-gray-600 dark:text-gray-400">通过用户旅程全链路的数字化记录，包含登陆、互动、停留、领卡、扫脸上课、上课偏好、训练效果、转介行为、价格偏好等数据。</p>
+                        </div>
+                        <div class="mt-3 flex justify-end">
+                            <span class="text-xs px-2 py-1 bg-secondary-50 dark:bg-secondary-900 text-secondary-600 dark:text-secondary-300 rounded-full">个性化体验</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-sm">
+                        <div class="w-12 h-12 flex items-center justify-center bg-secondary-100 dark:bg-secondary-900 rounded-full mb-4">
+                            <i class="fas fa-random text-xl text-secondary-600 dark:text-secondary-300"></i>
+                        </div>
+                        <h4 class="font-medium mb-3 text-gray-800 dark:text-white">流量调度模型</h4>
+                        <p class="text-sm">通过独有的流量预测和分流牵引机制，将用户尽可能均匀分布在每天的各个时段。</p>
+                        
+                        <!-- 流量调度模型图片 - 修改为单行显示 -->
+                        <div class="my-4">
+                            <div class="relative rounded-lg overflow-hidden mb-3" style="height: 160px;">
+                                <img src="./images/智能排班示意图.png" alt="智能排班示意图" class="absolute inset-0 w-full h-full object-cover">
+                                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2">
+                                    <p class="text-xs text-white">智能排班系统</p>
+                                </div>
+                            </div>
+                            <div class="relative rounded-lg overflow-hidden" style="height: 160px;">
+                                <img src="./images/在线预测.png" alt="在线预测" class="absolute inset-0 w-full h-full object-cover">
+                                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2">
+                                    <p class="text-xs text-white">流量在线预测</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700">
+                            <p class="text-sm text-gray-600 dark:text-gray-400">解决传统健身房高峰期拥挤、闲时闲置的问题，提高场地利用效率。</p>
+                        </div>
+                        <div class="mt-3 flex justify-end">
+                            <span class="text-xs px-2 py-1 bg-secondary-50 dark:bg-secondary-900 text-secondary-600 dark:text-secondary-300 rounded-full">坪效1w+/每平方</span>
+                            <span class="text-xs px-2 py-1 bg-secondary-50 dark:bg-secondary-900 text-secondary-600 dark:text-secondary-300 rounded-full ml-2">预约率90%+</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-sm">
+                        <div class="w-12 h-12 flex items-center justify-center bg-secondary-100 dark:bg-secondary-900 rounded-full mb-4">
+                            <i class="fas fa-chart-bar text-xl text-secondary-600 dark:text-secondary-300"></i>
+                        </div>
+                        <h4 class="font-medium mb-3 text-gray-800 dark:text-white">门店运营数据系统</h4>
+                        <p class="text-sm">运营数据实时更新，基于核心指标进行AI数据挖掘和深度分析。</p>
+                        
+                        <!-- 门店运营数据图片 - 修改为单行显示 -->
+                        <div class="my-4 space-y-3">
+                            <div class="relative rounded-lg overflow-hidden" style="height: 140px;">
+                                <img src="./images/运营数据示意图.png" alt="运营数据示意图" class="absolute inset-0 w-full h-full object-cover">
+                                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2">
+                                    <p class="text-xs text-white">数据概览</p>
+                                </div>
+                            </div>
+                            <div class="relative rounded-lg overflow-hidden" style="height: 140px;">
+                                <img src="./images/运营数据-课量管理.png" alt="课量管理" class="absolute inset-0 w-full h-full object-cover">
+                                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2">
+                                    <p class="text-xs text-white">课量管理</p>
+                                </div>
+                            </div>
+                            <div class="relative rounded-lg overflow-hidden" style="height: 140px;">
+                                <img src="./images/权责示意图.png" alt="权责示意图" class="absolute inset-0 w-full h-full object-cover">
+                                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2">
+                                    <p class="text-xs text-white">权责管理</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700">
+                            <p class="text-sm text-gray-600 dark:text-gray-400">系统自动提供运营建议，帮助门店管理者做出更明智的决策。</p>
+                        </div>
+                        <div class="mt-3 flex justify-end">
+                            <span class="text-xs px-2 py-1 bg-secondary-50 dark:bg-secondary-900 text-secondary-600 dark:text-secondary-300 rounded-full">实时数据</span>
+                            <span class="text-xs px-2 py-1 bg-secondary-50 dark:bg-secondary-900 text-secondary-600 dark:text-secondary-300 rounded-full ml-2">AI分析</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 系统优势总结 -->
+                <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm mt-6">
+                    <h4 class="font-medium mb-3 text-gray-800 dark:text-white flex items-center">
+                        <i class="fas fa-award text-secondary-500 mr-2"></i>
+                        系统优势总结
+                    </h4>
+                    
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-secondary-50 dark:bg-gray-700 p-4 rounded-lg">
+                            <div class="flex items-center mb-2">
+                                <div class="w-8 h-8 rounded-full bg-secondary-100 dark:bg-secondary-900 flex items-center justify-center mr-3">
+                                    <i class="fas fa-users text-secondary-500"></i>
+                                </div>
+                                <h5 class="font-medium">用户体验与存留</h5>
+                            </div>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">用户体验和存留率远高于行业平均水平</p>
+                        </div>
+                        
+                        <div class="bg-secondary-50 dark:bg-gray-700 p-4 rounded-lg">
+                            <div class="flex items-center mb-2">
+                                <div class="w-8 h-8 rounded-full bg-secondary-100 dark:bg-secondary-900 flex items-center justify-center mr-3">
+                                    <i class="fas fa-building text-secondary-500"></i>
+                                </div>
+                                <h5 class="font-medium">场地利用率</h5>
+                            </div>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">解决传统健身房场地利用率低的问题</p>
+                        </div>
+                        
+                        <div class="bg-secondary-50 dark:bg-gray-700 p-4 rounded-lg">
+                            <div class="flex items-center mb-2">
+                                <div class="w-8 h-8 rounded-full bg-secondary-100 dark:bg-secondary-900 flex items-center justify-center mr-3">
+                                    <i class="fas fa-chart-line text-secondary-500"></i>
+                                </div>
+                                <h5 class="font-medium">数据驱动决策</h5>
+                            </div>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">数据驱动决策，降低运营风险</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 规模化获客能力 -->
+            <div class="mt-8 bg-gradient-to-r from-white to-secondary-50 dark:from-gray-800 dark:to-gray-700 p-6 rounded-xl border border-secondary-100 dark:border-gray-700 shadow-md animate-on-scroll">
+                <h3 class="text-xl font-semibold mb-4 text-gray-800 dark:text-white flex items-center">
+                    <i class="fas fa-bullhorn text-secondary-500 mr-3"></i>
+                    基于内容的规模化获客能力-保障流量
+                </h3>
+                
+                <div class="flex flex-col md:flex-row gap-6 my-6">
+                    <div class="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-sm flex-1">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 flex items-center justify-center bg-secondary-100 dark:bg-secondary-900 rounded-full mr-4">
+                                <i class="fas fa-video text-xl text-secondary-600 dark:text-secondary-300"></i>
+                            </div>
+                            <h4 class="text-lg font-medium text-gray-800 dark:text-white">体德智训的内容直播间</h4>
+                        </div>
+                        
+                        <div class="flex items-center justify-between mb-4 bg-secondary-50 dark:bg-gray-700 p-3 rounded-lg">
+                            <span class="text-sm font-medium">训练教学向内容</span>
+                            <div class="flex items-center">
+                                <i class="fas fa-eye text-secondary-500 mr-2"></i>
+                                <span class="font-bold text-secondary-600 dark:text-secondary-300">50万+</span>
+                                <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">每小时场观</span>
+                            </div>
+                        </div>
+                        
+                        <p class="text-sm mb-4"><span class="highlight">零付费</span>获取大量精准流量，这一能力可以对外赋能，为无人健身房提供稳定的用户来源。</p>
+                        
+                        <div class="grid grid-cols-2 gap-4 mt-6">
+                            <div class="bg-secondary-50 dark:bg-gray-700 p-3 rounded-lg">
+                                <h5 class="text-sm font-medium mb-2 flex items-center">
+                                    <i class="fas fa-users text-secondary-500 mr-2"></i>
+                                    精准人群画像
+                                </h5>
+                                <p class="text-xs text-gray-600 dark:text-gray-400">直播用户群体与无人健身房核心用户群体<span class="highlight">高度重合</span></p>
+                            </div>
+                            
+                            <div class="bg-secondary-50 dark:bg-gray-700 p-3 rounded-lg">
+                                <h5 class="text-sm font-medium mb-2 flex items-center">
+                                    <i class="fas fa-copy text-secondary-500 mr-2"></i>
+                                    标准化可复制
+                                </h5>
+                                <p class="text-xs text-gray-600 dark:text-gray-400">直播间已实现<span class="highlight">1年以上</span>的标准化稳定运行</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-sm md:w-1/3">
+                        <h4 class="font-medium mb-4 text-gray-800 dark:text-white border-b border-gray-200 dark:border-gray-700 pb-2">获客优势</h4>
+                        
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <div class="w-6 h-6 flex items-center justify-center bg-green-100 dark:bg-green-900 rounded-full mt-0.5 mr-3 flex-shrink-0">
+                                    <i class="fas fa-dollar-sign text-xs text-green-600 dark:text-green-400"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-sm font-medium">低获客成本</h5>
+                                    <p class="text-xs text-gray-600 dark:text-gray-400">相比传统广告投放，大幅降低获客成本</p>
+                                </div>
+                            </li>
+                            
+                            <li class="flex items-start">
+                                <div class="w-6 h-6 flex items-center justify-center bg-blue-100 dark:bg-blue-900 rounded-full mt-0.5 mr-3 flex-shrink-0">
+                                    <i class="fas fa-bullseye text-xs text-blue-600 dark:text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-sm font-medium">精准触达</h5>
+                                    <p class="text-xs text-gray-600 dark:text-gray-400">内容直接触达目标用户群体，转化率高</p>
+                                </div>
+                            </li>
+                            
+                            <li class="flex items-start">
+                                <div class="w-6 h-6 flex items-center justify-center bg-purple-100 dark:bg-purple-900 rounded-full mt-0.5 mr-3 flex-shrink-0">
+                                    <i class="fas fa-sync text-xs text-purple-600 dark:text-purple-400"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-sm font-medium">可持续性</h5>
+                                    <p class="text-xs text-gray-600 dark:text-gray-400">内容持续产出，形成稳定的流量池</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 添加直播截图 -->
+                <div class="mt-6 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm">
+                    <h4 class="font-medium mb-3 text-gray-800 dark:text-white text-center">体德直播实况与数据分析</h4>
+                    
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="relative h-64 bg-gray-100 dark:bg-gray-900 rounded-lg overflow-hidden">
+                            <img src="./images/体德直播截图.jpg" alt="体德直播截图" class="absolute inset-0 w-full h-full object-contain">
+                            <div class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full flex items-center">
+                                <i class="fas fa-circle text-xs mr-1"></i> 直播中
+                            </div>
+                            <div class="absolute bottom-2 left-2 bg-white dark:bg-gray-800 text-xs px-2 py-1 rounded-full text-gray-700 dark:text-gray-300">
+                                训练教学内容直播现场
+                            </div>
+                        </div>
+                        
+                        <div class="relative h-64 bg-gray-100 dark:bg-gray-900 rounded-lg overflow-hidden">
+                            <img src="./images/体德直播后台.png" alt="体德直播后台" class="absolute inset-0 w-full h-full object-contain">
+                            <div class="absolute top-2 right-2 bg-secondary-500 text-white text-xs px-2 py-1 rounded-full">
+                                数据分析
+                            </div>
+                            <div class="absolute bottom-2 left-2 bg-white dark:bg-gray-800 text-xs px-2 py-1 rounded-full text-gray-700 dark:text-gray-300">
+                                实时观看人数与互动数据
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-secondary-50 dark:bg-gray-700 p-4 rounded-lg border-l-4 border-secondary-500 mt-4">
+                    <p class="font-medium mb-4">流量转化路径</p>
+                    
+                    <div class="flex flex-col md:flex-row items-center justify-center">
+                        <div class="flex flex-col items-center mb-4 md:mb-0 md:mr-6">
+                            <div class="w-14 h-14 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center shadow-sm mb-2">
+                                <i class="fas fa-play text-lg text-secondary-500"></i>
+                            </div>
+                            <span class="text-xs text-center mt-1">内容吸引</span>
+                        </div>
+                        
+                        <div class="hidden md:block text-secondary-500 mb-6">
+                            <i class="fas fa-long-arrow-alt-right text-xl"></i>
+                        </div>
+                        <div class="block md:hidden text-secondary-500 -my-2">
+                            <i class="fas fa-long-arrow-alt-down text-xl"></i>
+                        </div>
+                        
+                        <div class="flex flex-col items-center mb-4 md:mb-0 md:mr-6">
+                            <div class="w-14 h-14 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center shadow-sm mb-2">
+                                <i class="fas fa-user-plus text-lg text-secondary-500"></i>
+                            </div>
+                            <span class="text-xs text-center mt-1">用户关注</span>
+                        </div>
+                        
+                        <div class="hidden md:block text-secondary-500 mb-6">
+                            <i class="fas fa-long-arrow-alt-right text-xl"></i>
+                        </div>
+                        <div class="block md:hidden text-secondary-500 -my-2">
+                            <i class="fas fa-long-arrow-alt-down text-xl"></i>
+                        </div>
+                        
+                        <div class="flex flex-col items-center mb-4 md:mb-0 md:mr-6">
+                            <div class="w-14 h-14 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center shadow-sm mb-2">
+                                <i class="fas fa-store text-lg text-secondary-500"></i>
+                            </div>
+                            <span class="text-xs text-center mt-1">引导到店</span>
+                        </div>
+                        
+                        <div class="hidden md:block text-secondary-500 mb-6">
+                            <i class="fas fa-long-arrow-alt-right text-xl"></i>
+                        </div>
+                        <div class="block md:hidden text-secondary-500 -my-2">
+                            <i class="fas fa-long-arrow-alt-down text-xl"></i>
+                        </div>
+                        
+                        <div class="flex flex-col items-center">
+                            <div class="w-14 h-14 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center shadow-sm mb-2">
+                                <i class="fas fa-credit-card text-lg text-secondary-500"></i>
+                            </div>
+                            <span class="text-xs text-center mt-1">转化付费</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 健康餐合作模式 -->
+            <div class="mt-8 bg-gradient-to-r from-white to-green-50 dark:from-gray-800 dark:to-gray-700 p-6 rounded-xl border border-green-100 dark:border-gray-700 shadow-md animate-on-scroll">
+                <h3 class="text-xl font-semibold mb-4 text-gray-800 dark:text-white flex items-center">
+                    <i class="fas fa-utensils text-green-500 mr-3"></i>
+                    健康餐合作模式：饱饱博士植入
+                </h3>
+                
+                <div class="flex flex-col md:flex-row gap-6 my-6">
+                    <div class="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-sm md:w-2/5">
+                        <h4 class="font-medium mb-4 text-gray-800 dark:text-white border-b border-gray-200 dark:border-gray-700 pb-2 flex items-center">
+                            <i class="fas fa-star text-yellow-400 mr-2"></i>
+                            饱饱博士产品介绍
+                        </h4>
+                        
+                        <div class="flex items-center justify-center mb-4">
+                            <div class="w-24 h-24 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center">
+                                <i class="fas fa-utensils text-3xl text-green-600 dark:text-green-300"></i>
+                            </div>
+                        </div>
+                        
+                        <p class="text-center mb-4 font-medium">以美味、超值、健康为核心价值，致力于为消费者提供好吃的身材管理餐</p>
+                        
+                        <div class="grid grid-cols-2 gap-3 mt-4">
+                            <div class="bg-green-50 dark:bg-gray-700 p-2 rounded-lg text-center">
+                                <span class="text-sm font-medium">客单价</span>
+                                <p class="text-lg font-bold text-green-600 dark:text-green-300">18-20元</p>
+                            </div>
+                            <div class="bg-green-50 dark:bg-gray-700 p-2 rounded-lg text-center">
+                                <span class="text-sm font-medium">加热时间</span>
+                                <p class="text-lg font-bold text-green-600 dark:text-green-300">6分钟</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-sm flex-1">
+                        <h4 class="font-medium mb-4 text-gray-800 dark:text-white">场景举例：一站式体验</h4>
+                        
+                        <div class="flex flex-col md:flex-row items-center justify-between">
+                            <div class="flex items-center mb-4 md:mb-0">
+                                <div class="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center mr-4">
+                                    <i class="fas fa-dumbbell text-green-600 dark:text-green-300"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium">训练完成</h5>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">用户在场馆完成训练</p>
+                                </div>
+                            </div>
+                            
+                            <i class="fas fa-arrow-right text-gray-400 my-2 md:my-0"></i>
+                            
+                            <div class="flex items-center mb-4 md:mb-0">
+                                <div class="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center mr-4">
+                                    <i class="fas fa-shopping-bag text-green-600 dark:text-green-300"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium">多种购买方式</h5>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">场馆现场购买/带走/网上订购</p>
+                                </div>
+                            </div>
+                            
+                            <i class="fas fa-arrow-right text-gray-400 my-2 md:my-0"></i>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center mr-4">
+                                    <i class="fas fa-utensils text-green-600 dark:text-green-300"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium">即食享用</h5>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">微波炉加热6分钟即可食用</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 p-3 bg-green-50 dark:bg-gray-700 rounded-lg text-center">
+                            <p class="font-medium">完成"吃练"一站式体验，真正帮助用户实现减脂目标</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 饱饱博士产品图片展示 -->
+                <div class="mt-6 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm">
+                    <h4 class="font-medium mb-3 text-gray-800 dark:text-white text-center">饱饱博士产品展示</h4>
+                    
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="relative h-64 bg-gray-100 dark:bg-gray-900 rounded-lg overflow-hidden">
+                            <img src="./images/饱饱博士示意.png" alt="饱饱博士产品示意" class="absolute inset-0 w-full h-full object-contain">
+                            <div class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">
+                                产品示意
+                            </div>
+                        </div>
+                        
+                        <div class="relative h-64 bg-gray-100 dark:bg-gray-900 rounded-lg overflow-hidden">
+                            <img src="./images/饱饱博士sku.png" alt="饱饱博士SKU" class="absolute inset-0 w-full h-full object-contain">
+                            <div class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">
+                                产品系列
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16 animate-on-scroll">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8 text-gray-800 dark:text-white">未来展望：从"器械商"到"健康生态主导者"</h2>
+            
+            <div class="principle-analysis">
+                <p class="mb-6">中国健身行业正从"规模扩张"转向"效率竞争"。24小时赛道不仅契合消费降级趋势，更与舒华的硬件基因、政策资源高度契合。</p>
+                
+                <div class="bg-gradient-to-r from-primary-50 to-secondary-50 dark:from-gray-800 dark:to-gray-700 p-6 rounded-xl mb-8 border border-primary-100 dark:border-gray-600">
+                    <p class="text-lg font-medium text-center">若能构建运动+饮食的一站式服务模式，舒华有望以低成本、高标准化模式快速占领市场，最终从健身器械供应商升级为全民健康生态的整合者。</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6 mt-8">
+                    <div class="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-sm border-t-4 border-primary-500">
+                        <h4 class="font-medium mb-3 text-gray-800 dark:text-white flex items-center">
+                            <i class="fas fa-chart-pie text-primary-500 mr-2"></i>
+                            市场趋势
+                        </h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary-500 mt-1 mr-2"></i>
+                                <span>从"规模扩张"转向"效率竞争"</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary-500 mt-1 mr-2"></i>
+                                <span>消费降级趋势持续，低价高频模式成主流</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary-500 mt-1 mr-2"></i>
+                                <span>健康管理需求从单一训练向综合服务转变</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-sm border-t-4 border-secondary-500">
+                        <h4 class="font-medium mb-3 text-gray-800 dark:text-white flex items-center">
+                            <i class="fas fa-rocket text-secondary-500 mr-2"></i>
+                            舒华战略机遇
+                        </h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-secondary-500 mt-1 mr-2"></i>
+                                <span>硬件成本优势转化为市场竞争壁垒</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-secondary-500 mt-1 mr-2"></i>
+                                <span>健萌生态赋能提供运营和获客保障</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-secondary-500 mt-1 mr-2"></i>
+                                <span>从单一器械供应商升级为健康生态整合者</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="author-section animate-on-scroll">
+            <div class="author-info">
+                <h3 class="text-xl font-semibold mb-3 text-gray-800 dark:text-white">健萌集团</h3>
+                <p class="copyright">© 版权所有 2025</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 深色/浅色模式切换
+        const themeToggle = document.getElementById('theme-toggle');
+        
+        // 检查系统偏好
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        
+        // 切换主题
+        themeToggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+        
+        // 滚动动画
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+        
+        // 初始检查
+        window.addEventListener('load', animateOnScroll);
+        // 滚动时检查
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
+</body>
+</html>
