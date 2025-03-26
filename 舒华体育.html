@@ -114,6 +114,68 @@
             opacity: 1;
             transform: translateY(0);
         }
+        
+        /* 图片放大查看功能 */
+        .image-container {
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .image-container:hover::after {
+            content: '点击查看大图';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            z-index: 10;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            overflow: auto;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            margin: auto;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .modal-caption {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
     </style>
 </head>
 <body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
@@ -429,15 +491,15 @@
                         <h4 class="font-medium mb-3 text-gray-800 dark:text-white">会员全生命周期运营体系</h4>
                         <p class="text-sm">构建了完整的会员全生命周期运营体系，为用户提供运动+营养+兴趣挑战社群的一站式服务。</p>
                         
-                        <!-- 会员全生命周期图片 - 修改为单行显示 -->
+                        <!-- 会员全生命周期图片 -->
                         <div class="my-4">
-                            <div class="relative rounded-lg overflow-hidden mb-3" style="height: 240px;">
+                            <div class="relative rounded-lg overflow-hidden mb-3 image-container" style="height: 240px;">
                                 <img src="./images/app首页.jpg" alt="APP首页" class="absolute inset-0 w-full h-full object-contain bg-gray-100 dark:bg-gray-900">
                                 <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2">
                                     <p class="text-xs text-white">APP首页界面</p>
                                 </div>
                             </div>
-                            <div class="relative rounded-lg overflow-hidden" style="height: 160px;">
+                            <div class="relative rounded-lg overflow-hidden image-container" style="height: 160px;">
                                 <img src="./images/刷脸示意图.jpg" alt="刷脸示意图" class="absolute inset-0 w-full h-full object-cover">
                                 <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2">
                                     <p class="text-xs text-white">刷脸入场系统</p>
@@ -460,15 +522,15 @@
                         <h4 class="font-medium mb-3 text-gray-800 dark:text-white">流量调度模型</h4>
                         <p class="text-sm">通过独有的流量预测和分流牵引机制，将用户尽可能均匀分布在每天的各个时段。</p>
                         
-                        <!-- 流量调度模型图片 - 修改为单行显示 -->
+                        <!-- 流量调度模型图片 -->
                         <div class="my-4">
-                            <div class="relative rounded-lg overflow-hidden mb-3" style="height: 160px;">
+                            <div class="relative rounded-lg overflow-hidden mb-3 image-container" style="height: 160px;">
                                 <img src="./images/智能排班示意图.png" alt="智能排班示意图" class="absolute inset-0 w-full h-full object-cover">
                                 <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2">
                                     <p class="text-xs text-white">智能排班系统</p>
                                 </div>
                             </div>
-                            <div class="relative rounded-lg overflow-hidden" style="height: 160px;">
+                            <div class="relative rounded-lg overflow-hidden image-container" style="height: 160px;">
                                 <img src="./images/在线预测.png" alt="在线预测" class="absolute inset-0 w-full h-full object-cover">
                                 <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2">
                                     <p class="text-xs text-white">流量在线预测</p>
@@ -492,21 +554,21 @@
                         <h4 class="font-medium mb-3 text-gray-800 dark:text-white">门店运营数据系统</h4>
                         <p class="text-sm">运营数据实时更新，基于核心指标进行AI数据挖掘和深度分析。</p>
                         
-                        <!-- 门店运营数据图片 - 修改为单行显示 -->
+                        <!-- 门店运营数据图片 -->
                         <div class="my-4 space-y-3">
-                            <div class="relative rounded-lg overflow-hidden" style="height: 140px;">
+                            <div class="relative rounded-lg overflow-hidden image-container" style="height: 140px;">
                                 <img src="./images/运营数据示意图.png" alt="运营数据示意图" class="absolute inset-0 w-full h-full object-cover">
                                 <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2">
                                     <p class="text-xs text-white">数据概览</p>
                                 </div>
                             </div>
-                            <div class="relative rounded-lg overflow-hidden" style="height: 140px;">
+                            <div class="relative rounded-lg overflow-hidden image-container" style="height: 140px;">
                                 <img src="./images/运营数据-课量管理.png" alt="课量管理" class="absolute inset-0 w-full h-full object-cover">
                                 <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2">
                                     <p class="text-xs text-white">课量管理</p>
                                 </div>
                             </div>
-                            <div class="relative rounded-lg overflow-hidden" style="height: 140px;">
+                            <div class="relative rounded-lg overflow-hidden image-container" style="height: 140px;">
                                 <img src="./images/权责示意图.png" alt="权责示意图" class="absolute inset-0 w-full h-full object-cover">
                                 <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2">
                                     <p class="text-xs text-white">权责管理</p>
@@ -653,7 +715,7 @@
                     <h4 class="font-medium mb-3 text-gray-800 dark:text-white text-center">体德直播实况与数据分析</h4>
                     
                     <div class="grid md:grid-cols-2 gap-4">
-                        <div class="relative h-64 bg-gray-100 dark:bg-gray-900 rounded-lg overflow-hidden">
+                        <div class="relative h-64 bg-gray-100 dark:bg-gray-900 rounded-lg overflow-hidden image-container">
                             <img src="./images/体德直播截图.jpg" alt="体德直播截图" class="absolute inset-0 w-full h-full object-contain">
                             <div class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full flex items-center">
                                 <i class="fas fa-circle text-xs mr-1"></i> 直播中
@@ -663,7 +725,7 @@
                             </div>
                         </div>
                         
-                        <div class="relative h-64 bg-gray-100 dark:bg-gray-900 rounded-lg overflow-hidden">
+                        <div class="relative h-64 bg-gray-100 dark:bg-gray-900 rounded-lg overflow-hidden image-container">
                             <img src="./images/体德直播后台.png" alt="体德直播后台" class="absolute inset-0 w-full h-full object-contain">
                             <div class="absolute top-2 right-2 bg-secondary-500 text-white text-xs px-2 py-1 rounded-full">
                                 数据分析
@@ -815,14 +877,14 @@
                     <h4 class="font-medium mb-3 text-gray-800 dark:text-white text-center">饱饱博士产品展示</h4>
                     
                     <div class="grid md:grid-cols-2 gap-4">
-                        <div class="relative h-64 bg-gray-100 dark:bg-gray-900 rounded-lg overflow-hidden">
+                        <div class="relative h-64 bg-gray-100 dark:bg-gray-900 rounded-lg overflow-hidden image-container">
                             <img src="./images/饱饱博士示意.png" alt="饱饱博士产品示意" class="absolute inset-0 w-full h-full object-contain">
                             <div class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">
                                 产品示意
                             </div>
                         </div>
                         
-                        <div class="relative h-64 bg-gray-100 dark:bg-gray-900 rounded-lg overflow-hidden">
+                        <div class="relative h-64 bg-gray-100 dark:bg-gray-900 rounded-lg overflow-hidden image-container">
                             <img src="./images/饱饱博士sku.png" alt="饱饱博士SKU" class="absolute inset-0 w-full h-full object-contain">
                             <div class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">
                                 产品系列
@@ -929,6 +991,54 @@
         window.addEventListener('load', animateOnScroll);
         // 滚动时检查
         window.addEventListener('scroll', animateOnScroll);
+    </script>
+
+    <!-- 图片查看模态框 -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="modalCaption" class="modal-caption"></div>
+    </div>
+
+    <script>
+        // 图片放大查看功能
+        document.addEventListener('DOMContentLoaded', function() {
+            // 获取模态框元素
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const captionText = document.getElementById('modalCaption');
+            const closeBtn = document.querySelector('.close-modal');
+            
+            // 为所有带有image-container类的容器添加点击事件
+            const imageContainers = document.querySelectorAll('.image-container');
+            imageContainers.forEach(container => {
+                container.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    modal.style.display = 'flex';
+                    modalImg.src = img.src;
+                    captionText.innerHTML = img.alt;
+                    
+                    // 禁止页面滚动
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+            
+            // 点击关闭按钮关闭模态框
+            closeBtn.addEventListener('click', function() {
+                modal.style.display = 'none';
+                // 恢复页面滚动
+                document.body.style.overflow = 'auto';
+            });
+            
+            // 点击模态框背景关闭模态框
+            modal.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                    // 恢复页面滚动
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
     </script>
 </body>
 </html>
